@@ -3,6 +3,18 @@ body {
     background-color: gray;
 }
 
+
+ul {
+    display: table; 
+    margin: auto;
+    text-align: left;
+    width: 77%;
+}
+
+div {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -34,18 +46,6 @@ h3 {
 }
 
 .email-address {
-    text-align: center;
-}
-
-
-ul {
-    display: table; 
-    margin: auto;
-    text-align: left;
-    width: 77%;
-}
-
-div {
     text-align: center;
 }
 
