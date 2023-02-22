@@ -13,33 +13,50 @@ h2 {
     text-align: center
 }
 
-.entity-name {
+h3 {
     text-align: center;
+}
+
+.entity-name {
     font-size: large;
+    font-weight:bold
 
 }
 
 .title {
     font-style: italic;
-    text-align: center;
-}
-
-.location {
-    text-align: center;
+    font-size: medium;
 }
 
 .date {
-    text-align: center;
     font-style: italic;
+    font-size: medium;
 }
 
 .email-address {
     text-align: center;
 }
 
-div {
-    font-size: medium;
+
+ul {
+    display: table; 
+    margin: auto;
+    text-align: left;
+    width: 77%;
 }
+
+div {
+    text-align: center;
+}
+
+.skills {
+    display: table; 
+    margin: auto;
+    text-align: left;
+    width: 25%;
+}
+
+
 
 
 
