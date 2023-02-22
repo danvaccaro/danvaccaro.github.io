@@ -2,3 +2,45 @@ body {
     color : rgb(19, 18, 18); 
     background-color: gray;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: x-large;
+    text-align: center
+}
+
+.entity-name {
+    text-align: center;
+    font-size: large;
+
+}
+
+.title {
+    font-style: italic;
+    text-align: center;
+}
+
+.location {
+    text-align: center;
+}
+
+.date {
+    text-align: center;
+    font-style: italic;
+}
+
+.email-address {
+    text-align: center;
+}
+
+div {
+    font-size: medium;
+}
+
+
+
+
