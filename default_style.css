@@ -56,7 +56,7 @@ h3 {
     width: 25%;
 }
 
-#decryptedMessage {
+.align-left {
     text-align: left;
 }
 
