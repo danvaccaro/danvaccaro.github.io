@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <header>
+        <title>fortnite cipher decoder</title>
+        <link rel="stylesheet" href="default_style.css">
+        <meta charset="utf-8">
+    </header>
+
+    <script>
+        function getInput() {
+            input = document.getElementById("eMessage");
+            return input.value;
+        }
+
+        function decrypt(encryptedMessage) {
+            const alphabet = "abcdefghijklmnopqrstuvwxyz";
+            cipher = [0, 3, 1, 0, 2, 0, 2, 3];
+            cipherIndex = 0;
+            storedChars = encryptedMessage.split(".");
+            decryptedChars = [];
+            //loop through stored chars
+            for (var i = 0; i < storedChars.length; i++) {
+                decryptedChars[i] = Number(storedChars[i]) - cipher[cipherIndex];
+                console.log("encrypted: " + storedChars[i]);
+                console.log("decrypted: " + decryptedChars[i]);
+                cipherIndex++;
+                if (cipherIndex == 8)
+                    cipherIndex = 0;
+                decryptedChars[i] = alphabet[decryptedChars[i] - 1];
+            }
+            console.log(storedChars);
+            console.log(decryptedChars.join(""));
+            document.getElementById("decryptedMessage").innerHTML = decryptedChars.join("");
+        }
+    </script>
+
+    <body>
+        <input type = "text" id = eMessage> <br>
+        <input type="submit" value="Decrypt" onclick = decrypt(document.getElementById("eMessage").value)> <br>
+        <div id = "decryptedMessage">   </div> <br>
+    </body>
+</html>
