@@ -14,23 +14,29 @@
         }
 
         function decrypt(encryptedMessage) {
+            //store the alphabet to map decrypted characters
             const alphabet = "abcdefghijklmnopqrstuvwxyz";
+            //store the cipher
             cipher = [0, 3, 1, 0, 2, 0, 2, 3];
+            //initialize cipher index at 0
             cipherIndex = 0;
+            //split the encrypted message into an array of integers delineated by "."
             storedChars = encryptedMessage.split(".");
+            //initialize an array to store decrypted chars
             decryptedChars = [];
             //loop through stored chars
             for (var i = 0; i < storedChars.length; i++) {
+                //the decrypted character will equal the stored char(converted to a number) minus the next value in the cipher
                 decryptedChars[i] = Number(storedChars[i]) - cipher[cipherIndex];
-                console.log("encrypted: " + storedChars[i]);
-                console.log("decrypted: " + decryptedChars[i]);
+                //increment the cipher index
                 cipherIndex++;
+                //if we've reached the end of the cipher, wrap back around
                 if (cipherIndex == 8)
                     cipherIndex = 0;
+                //set the value in decrypted array equal to its alphabetical equivalent
                 decryptedChars[i] = alphabet[decryptedChars[i] - 1];
             }
-            console.log(storedChars);
-            console.log(decryptedChars.join(""));
+            //output the decrypted message to the client
             document.getElementById("decryptedMessage").innerHTML = decryptedChars.join("");
         }
     </script>
