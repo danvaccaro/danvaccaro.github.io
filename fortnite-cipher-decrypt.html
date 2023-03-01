@@ -8,11 +8,6 @@
     </header>
 
     <script>
-        function getInput() {
-            input = document.getElementById("eMessage");
-            return input.value;
-        }
-
         function decrypt(encryptedMessage) {
             //store the alphabet to map decrypted characters
             const alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -31,7 +26,7 @@
                 //increment the cipher index
                 cipherIndex++;
                 //if we've reached the end of the cipher, wrap back around
-                if (cipherIndex == 8)
+                if (cipherIndex > 7)
                     cipherIndex = 0;
                 //set the value in decrypted array equal to its alphabetical equivalent
                 decryptedChars[i] = alphabet[decryptedChars[i] - 1];
