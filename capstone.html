@@ -3,8 +3,22 @@
 <body>
     <h1>Capstone Log</h1>
     <p>Click <a href="index.html">here</a> to return to the home page.</p>
-    <h2>Week 1</h2>
-    <p>I have decided that I will attempt to train an ML model to detect phishing attacks. Depending on how difficult the implementation takes, I may increase scope to analyze pcap files for signs of attack. I would also like to build a UI for the applicatiuon, something I haven't done before.</p>
+    <h2>Week 1: 5/27/2024</h2>
+    <p>I have decided that I will attempt to train an ML model to detect phishing attacks. Depending on the difficulty of the implementation, I may increase scope to analyze pcap files for signs of attack. I would also like to build a UI for the application, something I haven't done before.</p>
     <p>The first step will be to determine which libraries and datasets I will use for this, after which we can begin feature engineering and preliminary training on the datasets.</p>
+    <h2>Week 2: 6/1/2024</h2>
+    <p>I have identified a few datasets: 
+        <ul>
+            <li>spamassassin: contains labeled data for both spam and valid emails.</li>
+            <li>phishing: contains labeled data for phishing and valid websites.</li>
+            <li>Enron dump: contains many emails released as part of the Enron case.</li>
+            <li>Clinton dump: contains many emails released as part of a FOIA request on Hilary Clinton's emails.</li>
+        </ul>
+    </p>
+    <p>I will continue looking for more datasets, but these should be a good start. Initial processing will involve cleaning and normalizing the data into a consistent format. I will also need to ensure an even split of phishing and legitimate emails.</p>
+    <p>An important aspect of the data processing will be labeling emails as phishing or as legitimate. Since some of the datasets aren't clearly separated, this may involve labeling by myself - yet even I may mislabel the data. This will be a significant hurdle to solve.</p>
+    <p>I have identified a few libraries I will use - scikit-learn, pandas, nltk, autocorrect, will all be important tools. I'm sure I will encounter more as the project evolves, but these will be my base.</p>
+    <p>I will also need to determine what exactly I will consider a successful model. Do I base it on precision, accuracy, recall, F1 score, or some other metric? What number will be considered effective? Should I compare against what some other model predicts (such as ChatGPT)? I seriously doubt my model will be able to compete with the well-funded and extensively trained models, but it's worth looking at.</p>
+    <p>Next steps will be to look more deeply into the datasets and begin organizing a consistent structure, before assessing the labeling problem and commencing feature engineering.</p>
 </body>
 </html>
