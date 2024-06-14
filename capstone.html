@@ -19,5 +19,14 @@
     <p>I have identified a few libraries I will use - scikit-learn, pandas, nltk, autocorrect, will all be important tools. I'm sure I will encounter more as the project evolves, but these will be my base.</p>
     <p>I will also need to determine what exactly I will consider a successful model. Do I base it on precision, accuracy, recall, F1 score, or some other metric? What number will be considered effective? Should I compare against what some other model predicts (such as ChatGPT)? I seriously doubt my model will be able to compete with the well-funded and extensively trained models, but it's worth looking at.</p>
     <p>Next steps will be to look more deeply into the datasets and begin organizing a consistent structure, before assessing the labeling problem and commencing feature engineering.</p>
+    <h2>Week 3: 6/8/2024</h2>
+    <p>Rather than looking at the raw emails found in the previous week, I've done some deeper searches into literature and kaggle to find better datasets.</p>
+    <p>Alnemari, S.; Alshammari, M. Detecting Phishing Domains Using Machine Learning. Appl. Sci. 2023, 13, 4649. https://doi.org/10.3390/app13084649</p>
+    <p>This paper details a ML approach, but looks specifically at the URL's UCI dataset for phishing domains. While useful perhaps when looking at links in emails, we are looking specifically for email datasets.</p>
+    <p>https://www.kaggle.com/datasets/subhajournal/phishingemails</p>
+    <p>This dataset contains a split of safe and phishing emails, but doesn't provide email headers, only text. I was hoping to use header content as features, but this may still be useful.</p>
+    <p>https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset</p>
+    <p>This dataset is comprehensive and contains most of the sets found last week, labeled and organized. I think this will be the base I will build on. This dataset was built for Al-Subaiey, A., Al-Thani, M., Alam, N. A., Antora, K. F., Khandakar, A., & Zaman, S. A. U. (2024, May 19). Novel Interpretable and Robust Web-based AI Platform for Phishing Email Detection. ArXiv.org. https://arxiv.org/abs/2405.11619. Many thanks to the authors for this.</p>
+    <p>I have also built a basic python script to read in the csv into a pandas DataFrame. Now that I have it encoded, I will build an initial few models based on raw tokenized text, to develop a baseline.</p>
 </body>
 </html>
