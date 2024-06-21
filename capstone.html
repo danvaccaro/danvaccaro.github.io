@@ -3,10 +3,10 @@
 <body>
     <h1>Capstone Log</h1>
     <p>Click <a href="index.html">here</a> to return to the home page.</p>
-    <h2>Week 1: 5/27/2024</h2>
+    <h2>Week 1: 5/31/2024</h2>
     <p>I have decided that I will attempt to train an ML model to detect phishing attacks. Depending on the difficulty of the implementation, I may increase scope to analyze pcap files for signs of attack. I would also like to build a UI for the application, something I haven't done before.</p>
     <p>The first step will be to determine which libraries and datasets I will use for this, after which we can begin feature engineering and preliminary training on the datasets.</p>
-    <h2>Week 2: 6/1/2024</h2>
+    <h2>Week 2: 6/7/2024</h2>
     <p>I have identified a few datasets: 
         <ul>
             <li>spamassassin: contains labeled data for both spam and valid emails.</li>
@@ -19,7 +19,7 @@
     <p>I have identified a few libraries I will use - scikit-learn, pandas, nltk, autocorrect, will all be important tools. I'm sure I will encounter more as the project evolves, but these will be my base.</p>
     <p>I will also need to determine what exactly I will consider a successful model. Do I base it on precision, accuracy, recall, F1 score, or some other metric? What number will be considered effective? Should I compare against what some other model predicts (such as ChatGPT)? I seriously doubt my model will be able to compete with the well-funded and extensively trained models, but it's worth looking at.</p>
     <p>Next steps will be to look more deeply into the datasets and begin organizing a consistent structure, before assessing the labeling problem and commencing feature engineering.</p>
-    <h2>Week 3: 6/8/2024</h2>
+    <h2>Week 3: 6/14/2024</h2>
     <p>Rather than looking at the raw emails found in the previous week, I've done some deeper searches into literature and kaggle to find better datasets.</p>
     <p>Alnemari, S.; Alshammari, M. Detecting Phishing Domains Using Machine Learning. Appl. Sci. 2023, 13, 4649. https://doi.org/10.3390/app13084649</p>
     <p>This paper details a ML approach, but looks specifically at the URL's UCI dataset for phishing domains. While useful perhaps when looking at links in emails, we are looking specifically for email datasets.</p>
@@ -28,5 +28,10 @@
     <p>https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset</p>
     <p>This dataset is comprehensive and contains most of the sets found last week, labeled and organized. I think this will be the base I will build on. This dataset was built for Al-Subaiey, A., Al-Thani, M., Alam, N. A., Antora, K. F., Khandakar, A., & Zaman, S. A. U. (2024, May 19). Novel Interpretable and Robust Web-based AI Platform for Phishing Email Detection. ArXiv.org. https://arxiv.org/abs/2405.11619. Many thanks to the authors for this.</p>
     <p>I have also built a basic python script to read in the csv into a pandas DataFrame. Now that I have it encoded, I will build an initial few models based on raw tokenized text, to develop a baseline.</p>
+    <h2>Week 4: 6/21/2024</h2>
+    <p>I've created a GitHub repository to store the code. All assessments of the models will be stored in Jupyter notebooks.</p>
+    <p><a href="https://www.github.com/danvaccaro/attack_detection">GitHub Repository</a></p>
+    <p>I've built a BoW model using a count vectorizer and logistic regression model, based on the phishing email dataset that was preprocessed by Alnemari et al. I must say I'm a bit disappointed - this base model already has 98.8% accuracy based on cross-validation reports. I was hoping for a more challenging problem. From here, I could either try different algorithms to improve performance further, or I could look at the initial datasets before they were processed, which are available, and perform my own processing. I think I'll take the latter approach for my own educational purposes.</p>
+    <p>Next steps will be to look at the raw datasets and perform my own processing, before building a more complex model.</p>
 </body>
 </html>
