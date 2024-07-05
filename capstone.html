@@ -33,5 +33,14 @@
     <p><a href="https://www.github.com/danvaccaro/attack_detection">GitHub Repository</a></p>
     <p>I've built a BoW model using a count vectorizer and logistic regression model, based on the phishing email dataset that was preprocessed by Alnemari et al. I must say I'm a bit disappointed - this base model already has 98.8% accuracy based on cross-validation reports. I was hoping for a more challenging problem. From here, I could either try different algorithms to improve performance further, or I could look at the initial datasets before they were processed, which are available, and perform my own processing. I think I'll take the latter approach for my own educational purposes.</p>
     <p>Next steps will be to look at the raw datasets and perform my own processing, before building a more complex model. The tech demo for next week will probably just read in some spam, apply the model, and give a classification.</p>
+    <h2>Week 5: 6/28/2024</h2>
+    <p>Before doing my own processing, I've built a simple Flask app to act as a UI to plug in test data and classify it using the trained vectorizer and model. I've been feeding the previously trained model both legitimate and phishing emails, and it's been showing heavy bias towards phishing.</p>
+    <p>I've decided to add some simulated data to the datasets. I can generate phishing campaigns using gophish, as well as using LLMs to generate templates for various types of legitimate emails.</p>
+    <p>Other ideas I have include adding additional heuristics on top of the ML aspect of things for more checks on things such as embedded URLs, and passing to websites such as PhishTank to check for malicious content.</p>
+    <p>Next steps will be to generate the simulated data and add it to the dataset, then generate a processing pipeline before retraining the model and testing it in the Flask app.</p>
+    <h2>Week 6: 7/5/2024</h2>
+    <p>Due to a family emergency, I wasn't able to put in much work this week. However, I have decided I will be evolving this project to be more of a platform for community-aggregated phishing data. While similar ideas exist such as PhishTank, those are focused on urls.
+    <p>My idea is to have a platform where users can submit emails they suspect are phishing, and the community can vote on whether they are or not. This will be a good way to generate more data for the model, and also to provide a service to the community. From this data, we will periodically train models and offer them to users. The platform will be integrated with a thunderbird extension for simplified reporting and filtering. More details to come.</p>
+    </p>
 </body>
 </html>
